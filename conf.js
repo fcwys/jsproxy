@@ -12,6 +12,12 @@ jsproxy_config({
 
   // 节点配置
   node_map: {
+    'mysite': {
+      label: '当前站点',
+      lines: {
+        [location.host]: 1,
+      }
+    },
     'demo-hk': {
       label: '演示服务-香港节点',
       lines: {
@@ -25,12 +31,6 @@ jsproxy_config({
       lines: {
         'node-aliyun-sg.etherdream.com:8443': 1,
       },
-    },
-    'mysite': {
-      label: '当前站点',
-      lines: {
-        [location.host]: 1,
-      }
     },
     // 该节点用于加载大体积的静态资源
     'cfworker': {
@@ -88,8 +88,8 @@ jsproxy_config({
     'https://www.baidu.com/img/baidu_resultlogo@2.png': {
       replace: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png'
     },
-    'https://www.pornhub.com/': {
-      redir: 'https://php.net/'
+    'https://www.baidu.com/': {
+      redir: 'https://www.baidu.com/'
     },
     'http://haha.com/': {
       content: 'Hello World'
